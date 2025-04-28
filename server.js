@@ -491,7 +491,11 @@ router.route('/geo/:ip')
         obj.country = geo.country;
         var access = 'Denied ';
         obj.msg = 'IP Country: ' + geo.country;
-        try { var c = Country.find({code: geo.country});}
+        try { 
+          var c = Country.find({code: geo.country});
+          if (c.length == 0)
+            c = false;
+        }
         catch { var c = false; }
         if (c) {
           obj.deny = false;
@@ -500,7 +504,7 @@ router.route('/geo/:ip')
         obj.msg = access + obj.msg;
       } else 
         obj.msg = 'Country not found';
-      obj.find = JSON.parse(JSON.stringify({ot: c}));
+      console.log(c);
       return res.status(200).json({...obj, success: true});
     })
     .all((req, res) => {
