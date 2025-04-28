@@ -500,6 +500,7 @@ router.route('/geo/:ip')
         obj.msg = access + obj.msg;
       } else 
         obj.msg = 'Country not found';
+      obj.find = c;
       return res.status(200).json({...obj, success: true});
     })
     .all((req, res) => {
@@ -535,7 +536,7 @@ router.route('/geoedit/:country')
           return res.status(500).json({ success: false, message: 'Something went wrong. Please try again later.' }); // 500 Internal Server Error
         }
       }
-      return res.status(201).json({ order: country, success: true });
+      return res.status(201).json({ country: country, success: true });
     })
     .delete(authJwtController.isAuthenticated, async (req, res) => {
       const cnt = {code: req.params.country};
