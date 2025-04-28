@@ -500,7 +500,7 @@ router.route('/geo/:ip')
         obj.msg = access + obj.msg;
       } else 
         obj.msg = 'Country not found';
-      obj.find = JSON.parse(JSON.stringify(c));
+      obj.find = JSON.parse(JSON.stringify({ot: c}));
       return res.status(200).json({...obj, success: true});
     })
     .all((req, res) => {
