@@ -492,7 +492,7 @@ router.route('/geo/:ip')
         var access = 'Denied ';
         obj.msg = 'IP Country: ' + geo.country;
         try { 
-          var c = Country.find({code: geo.country});
+          var c = await Country.find({code: geo.country});
           if (c.length == 0)
             c = false;
         }
