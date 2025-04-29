@@ -102,7 +102,7 @@ router.route('/orders')
     for (const key in obj)
     {
       const value = obj[key];
-      if ((!value && value!='False') || value.trim()=='')
+      if ((!value && value!=false) || String(value).trim()=='')
         error += 'Order needs a ' +key+ '! ';
     }
     // Items
@@ -113,9 +113,9 @@ router.route('/orders')
       for(var i=0; i<body.items.length; i++)
     {
       var itm = body.items[i];
-      if (!itm.itemname)
+      if (!itm.itemname || String(itm.itemname).trim()=='')
         error += 'Item[' +i+ '] has no itemname! ';
-      if (!itm.price)
+      if (!itm.price || String(itm.price).trim()=='')
         error += 'Item[' +i+ '] has no price! ';
       items.push({itemname: itm.itemname, price: itm.price});
     }
@@ -137,7 +137,7 @@ router.route('/orders')
         return res.status(500).json({ success: false, message: 'Something went wrong. Please try again later.' }); // 500 Internal Server Error
       }
     }
-    return res.status(201).json({ order: order, success: true });
+    return res.status(201).json({...order, success: true });
   })
   .all((req, res) => {
     // Any other HTTP Method
@@ -504,7 +504,7 @@ router.route('/geo/:ip')
         obj.msg = access + obj.msg;
       } else 
         obj.msg = 'Country not found';
-      console.log(c);
+      // console.log(c);
       return res.status(200).json({...obj, success: true});
     })
     .all((req, res) => {
