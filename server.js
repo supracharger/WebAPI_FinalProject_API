@@ -157,8 +157,8 @@ router.route('/orders/:orderId')
   .put(authJwtController.isAuthenticated, async (req, res) => {
     let keys = 'deny address city state zip items total msg date'.split(' ');
     var obj = {};
-    for (const k in keys)
-      if (req.body[k])
+    for (const k of keys)
+      if (req.body[k] || req.body[k]===false)
         obj[k] = req.body[k];
     if (Object.keys(obj).length == 0)
       return res.status(404).json({success: false, message: 'There is nothing to Update!'});
@@ -175,7 +175,7 @@ router.route('/orders/:orderId')
   .delete(authJwtController.isAuthenticated, async (req, res) => {
     const id = req.params.orderId;
     try {
-      var o = await Movie.findByIdAndDelete(id);
+      var o = await Order.findByIdAndDelete(id);
     } catch {
       o = false;
     }
