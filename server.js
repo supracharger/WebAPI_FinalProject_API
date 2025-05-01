@@ -8,6 +8,7 @@ const geoip = require('geoip-country');
 const User = require('./Users');
 const Order = require('./Orders'); 
 const Country = require('./Countries'); 
+const Item = require('./Items');
 const { default: mongoose } = require('mongoose');
 
 const app = express();
@@ -129,7 +130,7 @@ router.route('/orders')
       await order.save();
     } catch (err) {
       if (err.code === 11000) { // Strict equality check (===)
-        return res.status(409).json({ success: false, message: 'A movie with that name already exists.' }); // 409 Conflict
+        return res.status(409).json({ success: false, message: 'A order with that name already exists.' }); // 409 Conflict
       } else {
         console.error(err); // Log the error for debugging
         return res.status(500).json({ success: false, message: 'Something went wrong. Please try again later.' }); // 500 Internal Server Error
@@ -180,6 +181,96 @@ router.route('/orders/:orderId')
     if (!o)
       return res.status(404).json({success: false, message: 'Unable to Delete order.'});
     return res.status(200).json({success: true, message: 'Deleted Order.'});
+  })
+  .all((req, res) => {
+    // Any other HTTP Method
+    // Returns a message stating that the HTTP method is unsupported.
+    res.status(405).send({ message: 'HTTP method not supported.' });
+  });
+
+  router.route('/items')
+  .get(authJwtController.isAuthenticated, async (req, res) => {
+    // if (req.body.privledge != 'Admin')
+    // {
+    //   var msg = 'UnAuthorized!';
+    //   console.log(msg);
+    //   return res.status(404).json({ success: false, message: msg });
+    // }
+    const items = await Item.find();    // Get All Orders
+    return res.status(200).json(items);
+  })
+  .post(authJwtController.isAuthenticated, async (req, res) => {
+    const body = req.body;
+    var error = '';
+    let keys = 'name price imgurl'.split(' ');
+    var obj = {};
+    for (const k of keys)
+    {
+      var val = body[k];
+      if ((!val && val!=false) || String(val).trim() == '')
+        error += 'There needs to be a "' +k+ '"!\n';
+      else 
+        obj[k] = val;
+    }
+    //
+    if (error != '')
+      return res.status(500).json({ success: false, message: error });
+    const item = new Item(obj);
+    try {
+      await item.save();
+    } catch (err) {
+      if (err.code === 11000) { // Strict equality check (===)
+        return res.status(409).json({ success: false, message: 'A item with that name already exists.' }); // 409 Conflict
+      } else {
+        console.error(err); // Log the error for debugging
+        return res.status(500).json({ success: false, message: 'Something went wrong. Please try again later.' }); // 500 Internal Server Error
+      }
+    }
+    return res.status(201).json({...item, success: true });
+  })
+  .all((req, res) => {
+    // Any other HTTP Method
+    // Returns a message stating that the HTTP method is unsupported.
+    res.status(405).send({ message: 'HTTP method not supported.' });
+  });
+
+  router.route('/items/:itemId')
+  .get(authJwtController.isAuthenticated, async (req, res) => {
+    const id = req.params.itemId;
+    var item = await Item.findById(id);
+    if (!item)
+      return res.status(404).json({success: false, message: 'Unable to find item.'});
+    item = JSON.parse(JSON.stringify(item))
+    return res.status(200).json({...item, success: true});
+  })
+  .put(authJwtController.isAuthenticated, async (req, res) => {
+    let keys = 'name price imgurl'.split(' ');
+    var obj = {};
+    for (const k of keys)
+      if (req.body[k] || req.body[k]===false)
+        obj[k] = req.body[k];
+    if (Object.keys(obj).length == 0)
+      return res.status(404).json({success: false, message: 'There is nothing to Update!'});
+    const id = req.params.itemId;
+    try {
+      var it = await Item.findByIdAndUpdate(id, obj);
+    } catch {
+      it = false;
+    }
+    if (!it)
+      return res.status(404).json({success: false, message: 'Unable to Update Item.'});
+    return res.status(200).json({success: true, message: 'Updated Item.'});
+  })
+  .delete(authJwtController.isAuthenticated, async (req, res) => {
+    const id = req.params.itemId;
+    try {
+      var it = await Item.findByIdAndDelete(id);
+    } catch {
+      it = false;
+    }
+    if (!it)
+      return res.status(404).json({success: false, message: 'Unable to Delete Item.'});
+    return res.status(200).json({success: true, message: 'Deleted Item.'});
   })
   .all((req, res) => {
     // Any other HTTP Method
