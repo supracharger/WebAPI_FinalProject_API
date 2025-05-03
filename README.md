@@ -1,15 +1,24 @@
-## Postman to Check User & Movie Functions
+# Visit the Site:
 
-[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://app.getpostman.com/run-collection/41727814-50564607-e60e-4ae5-9ee4-907ee8fcc6c8?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D41727814-50564607-e60e-4ae5-9ee4-907ee8fcc6c8%26entityType%3Dcollection%26workspaceId%3D92d281e7-9dab-409a-8c66-e779278043cc#?env%5BQuaifeRobert-HW3%5D=W3sia2V5IjoiSldUIiwidmFsdWUiOiIiLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiYW55Iiwic2Vzc2lvblZhbHVlIjoiSldULi4uIiwiY29tcGxldGVTZXNzaW9uVmFsdWUiOiJKV1QgZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SnBaQ0k2SWpZM1pEWm1NRGMyTVdJd01EWTVPV1ZrTURkalpHSTNaU0lzSW5WelpYSnVZVzFsSWpvaVltRjBiV0Z1TWlJc0ltbGhkQ0k2TVRjME1qRTFOalk1TUN3aVpYaHdJam94TnpReU1UWXdNamt3ZlEudGMtdUJlTnhKYk9fOE0yZTJKNngzMEJxY0h1Tm5KSzI1RFpTVWYtamM2ZyIsInNlc3Npb25JbmRleCI6MH0seyJrZXkiOiJtb3ZpZV9pZCIsInZhbHVlIjoiIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImFueSIsInNlc3Npb25WYWx1ZSI6IjY3ZDczMDM0NTBlMDRjZTY4N2M0OWU5YiIsImNvbXBsZXRlU2Vzc2lvblZhbHVlIjoiNjdkNzMwMzQ1MGUwNGNlNjg3YzQ5ZTliIiwic2Vzc2lvbkluZGV4IjoxfV0=)
+[VISIT THE SITE](https://webapi-finalproject-react.onrender.com)
 
-## Postman for Review Functions
-[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://app.getpostman.com/run-collection/41727814-0edfe93d-36b2-4d33-9f61-27ad21449032?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D41727814-0edfe93d-36b2-4d33-9f61-27ad21449032%26entityType%3Dcollection%26workspaceId%3D92d281e7-9dab-409a-8c66-e779278043cc#?env%5BQuaifeRobert-HW3%5D=W3sia2V5IjoiSldUIiwidmFsdWUiOiIiLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiYW55Iiwic2Vzc2lvblZhbHVlIjoiSldULi4uIiwiY29tcGxldGVTZXNzaW9uVmFsdWUiOiJKV1QgZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SnBaQ0k2SWpZM1pEWm1NRGMyTVdJd01EWTVPV1ZrTURkalpHSTNaU0lzSW5WelpYSnVZVzFsSWpvaVltRjBiV0Z1TWlJc0ltbGhkQ0k2TVRjME16azRNRGcyTWl3aVpYaHdJam94TnpRek9UZzBORFl5ZlEuRzFPRVp0d2RERGJycG5sYUVnZFNJNFFBUFJZc3BQQ0gtSUNJVWlKMVhaWSIsInNlc3Npb25JbmRleCI6MH0seyJrZXkiOiJtb3ZpZV9pZCIsInZhbHVlIjoiIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImFueSIsInNlc3Npb25WYWx1ZSI6IjY3ZDc0MjhjNWQ5YmEyMWYyM2M1MWY3OCIsImNvbXBsZXRlU2Vzc2lvblZhbHVlIjoiNjdkNzQyOGM1ZDliYTIxZjIzYzUxZjc4Iiwic2Vzc2lvbkluZGV4IjoxfV0=)
+[Site Repository](https://github.com/supracharger/WebAPI_FinalProject_REACT)
+
+
+## Postman API Functions
+
+[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://app.getpostman.com/run-collection/41727814-ffd3d8dd-ae1e-4784-a7ff-5c27083aca53?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D41727814-ffd3d8dd-ae1e-4784-a7ff-5c27083aca53%26entityType%3Dcollection%26workspaceId%3D92d281e7-9dab-409a-8c66-e779278043cc#?env%5BQuaifeRobert_EnvFinal%5D=W3sia2V5IjoiSldUIiwidmFsdWUiOiIiLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiZGVmYXVsdCIsInNlc3Npb25WYWx1ZSI6IkpXVC4uLiIsImNvbXBsZXRlU2Vzc2lvblZhbHVlIjoiSldUIGV5SmhiR2NpT2lKSVV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUpwWkNJNklqWTNaRFptTURjMk1XSXdNRFk1T1dWa01EZGpaR0kzWlNJc0luVnpaWEp1WVcxbElqb2lZbUYwYldGdU1pSXNJbWxoZENJNk1UYzBOakk0TmpjME5Td2laWGh3SWpveE56UTJNamt3TXpRMWZRLjdfYlM0eERUd3UxT3ZEYTZraHFXQUppQnhHcHFBcDhGTVQ3M1dWVzBwd2ciLCJzZXNzaW9uSW5kZXgiOjB9LHsia2V5IjoidXNlcmlkIiwidmFsdWUiOiIiLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiZGVmYXVsdCIsInNlc3Npb25WYWx1ZSI6IjY3ZDZmMDc2MWIwMDY5OWVkMDdjZGI3ZSIsImNvbXBsZXRlU2Vzc2lvblZhbHVlIjoiNjdkNmYwNzYxYjAwNjk5ZWQwN2NkYjdlIiwic2Vzc2lvbkluZGV4IjoxfSx7ImtleSI6Im9yZGVyX2lkIiwidmFsdWUiOiIiLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiYW55Iiwic2Vzc2lvblZhbHVlIjoiNjgxNjM4NjFjNGZlZmUxOTZjYWI5OTAzIiwiY29tcGxldGVTZXNzaW9uVmFsdWUiOiI2ODE2Mzg2MWM0ZmVmZTE5NmNhYjk5MDMiLCJzZXNzaW9uSW5kZXgiOjJ9LHsia2V5IjoiaXRlbV9pZCIsInZhbHVlIjoiIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImFueSIsInNlc3Npb25WYWx1ZSI6IjY4MTUwM2Y1ZTAwMzdjZWM4YzMyOTZiYiIsImNvbXBsZXRlU2Vzc2lvblZhbHVlIjoiNjgxNTAzZjVlMDAzN2NlYzhjMzI5NmJiIiwic2Vzc2lvbkluZGV4IjozfV0=)
 
 ## Explanation
-This web service collects data on movies including specific info of each movie and the reviews for each movie.
+
+This web service Grants/ Denies IP addresses of the client. The countries are specified by the user. It also holds Orders and items for sale for the Financial Indicator App site. 
+
+You can send a request to see if an IP address is Granted or Denied, and display, add, modify and delete granted countries.
+
+Also, Order and items can be displayed, added, modified, and deleted.
 
 ### Create Account Sign-In
-Register send the request and json body: https://webapi-assignment3.onrender.com/signup
+Register send the request and json body: https://webapi-finalproject-api.onrender.com/signup
 
 Json Body Example:
 
@@ -21,7 +30,7 @@ Json Body Example:
 }
 </code>
 
-Sign-in request (be sure to save the JWT token): https://webapi-assignment3.onrender.com/signin
+Sign-in request (be sure to save the JWT token): https://webapi-finalproject-api.onrender.com/signin
 
 Json Body Example:
 
@@ -33,70 +42,65 @@ Json Body Example:
 </code>
 
 
-### Get Movies
+### Grant/ Deny IP Address
 
-***NOTE:*** be sure to add you JWT token to the header for most all requests. "Authorization": [Your JWT token from sign in]
+***NOTE:*** be sure to add you JWT token to the header for all requests. 
+"Authorization": [Your JWT token from sign in]
 
 
-Send request to: https://webapi-assignment3.onrender.com/movies
+Send GET request to: https://webapi-finalproject-api.onrender.com/geo/[Your IP Address]
 
-or with reviews:
+Here is a list of allowed countries: https://webapi-finalproject-api.onrender.com/geo
 
-https://webapi-assignment3.onrender.com/movies?reviews=true
+You can add & delete the list of granted countries:
+https://webapi-finalproject-api.onrender.com/geoedit/[Country Code]
 
-### Get Specific Movie
+### Orders
 
-Send request to: https://webapi-assignment3.onrender.com/movies/[Movie id i.e. "_id"]
+***NOTE:*** be sure to add you JWT token to the header for all requests. 
+"Authorization": [Your JWT token from sign in]
 
-or with reviews:
+GET all orders or POST order: https://webapi-finalproject-api.onrender.com/orders
 
-https://webapi-assignment3.onrender.com/movies/[Movie id i.e. "_id"]?reviews=true
-
-### Insert Review Example
-Send POST request to: https://webapi-assignment3.onrender.com/reviews
-
-Example JSON Body:
+Example JSON Body for POST request:
 
 <code>
 {
-    "username": "batman2",
-    "movieId": "67d7432b5d9ba21f23c51f8e",
-		"review": "Test",
-		"rating": 5
-  }
+    "userid": "[User ID]",
+    "deny": false,
+    "address": "1039 Pena Ave",
+    "city": "Somewhere",
+    "state": "Antarctica",
+    "zip": 10010,
+    "items": [
+        {"itemname": "TestItem", "price": 0.01},
+        {"itemname": "TestItem2", "price": 10000000000}
+        
+    ],
+    "total": 10000000000,
+    "msg": "Test Message"
+}
 </code>
 
-### Insert Movie Example
-Send POST request to: https://webapi-assignment3.onrender.com/movies
+GET specific order: https://webapi-finalproject-api.onrender.com/orders/[Order Id]
 
-Example JSON Body:
+Modify & Delete order: https://webapi-finalproject-api.onrender.com/orders/[Order Id]
+
+### Items
+
+***NOTE:*** be sure to add you JWT token to the header for all requests. 
+"Authorization": [Your JWT token from sign in]
+
+Send GET (All Items) & POST request to: https://webapi-finalproject-api.onrender.com/items
+
+Example JSON Body for POST request:
 
 <code>
 {
-    "title": "Venom",
-    "releaseDate": 2018,
-    "genre": "Science Fiction",
-    "actors": [
-      {"actorName": "Tom Hardy", "characterName": "Eddie Brock / Venom"},
-      {"actorName": "Michelle Williams", "characterName": "Anne Weying"},
-      {"actorName": "Riz Ahmed", "characterName": "Carlton Drake / Riot"}
-    ]
-  }
+    "name": "Item Test",
+    "price": 50,
+    "imgurl": "/myimg.png"
+}
 </code>
 
-## Environment Settings
-
-DB = [Mongo Database Endpoint]
-
-*For UNIQUE_KEY & SECRET_KEY You just need unique random text to generate JWT tokens.*
-
-UNIQUE_KEY = examplekey
-
-SECRET_KEY = examplesecretkey 
-
-## Movie Routes
-
-| Route | GET | POST | PUT | DELETE |
-| --- | --- | --- | --- | --- |
-| movies | Return all movies| save a single movie | FAIL | FAIL |
-| movies/:movieparameter | Return a specific movie based on the :movieparameter | FAIL | Update the specific movie based on the :movieparameter in your case it’s the title | Delete the specific movie based on the :movieparamters your case it’s the title |*
+GET, Modify, & Delete item: https://webapi-finalproject-api.onrender.com/items/[Item ID]
