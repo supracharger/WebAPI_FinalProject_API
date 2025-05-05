@@ -1,5 +1,9 @@
 # Visit the Site:
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/j-P9hNl2jO0/0.jpg)](https://youtu.be/j-P9hNl2jO0)
+
+The above image is a YouTube Video. Click the image to view the video.
+
 [VISIT THE SITE](https://webapi-finalproject-react.onrender.com)
 
 [Site Repository](https://github.com/supracharger/WebAPI_FinalProject_REACT)
@@ -78,8 +82,7 @@ Example JSON Body for POST request:
     "zip": 10010,
     "items": [
         {"itemname": "TestItem", "price": 0.01},
-        {"itemname": "TestItem2", "price": 10000000000}
-        
+        {"itemname": "TestItem2", "price": 10000000000}      
     ],
     "total": 10000000000,
     "msg": "Test Message"
@@ -108,3 +111,7 @@ Example JSON Body for POST request:
 </code>
 
 GET, Modify, & Delete item: https://webapi-finalproject-api.onrender.com/items/[Item ID]
+
+# EER Diagram DB
+
+![EER Diagram](DB_EER_Diagram.png)
